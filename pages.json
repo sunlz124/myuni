@@ -11,7 +11,7 @@
             "path" : "pages/list/list",
             "style" :                                                                                    
             {
-                "navigationBarTitleText": "",
+                "navigationBarTitleText": "分类",
                 "enablePullDownRefresh": false
             }
             
@@ -20,7 +20,7 @@
             "path" : "pages/find/find",
             "style" :                                                                                    
             {
-                "navigationBarTitleText": "",
+                "navigationBarTitleText": "发现",
                 "enablePullDownRefresh": false
             }
             
@@ -29,7 +29,7 @@
             "path" : "pages/cart/cart",
             "style" :                                                                                    
             {
-                "navigationBarTitleText": "",
+                "navigationBarTitleText": "购物车",
                 "enablePullDownRefresh": false
             }
             
@@ -44,6 +44,15 @@
 		    }
 		    
 		}
+        ,{
+            "path" : "pages/details/details",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",

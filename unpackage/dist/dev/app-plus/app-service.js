@@ -81,7 +81,7 @@ if (uni.restoreGlobal) {
     }
     return target;
   };
-  const _sfc_main$5 = {
+  const _sfc_main$6 = {
     name: "mytab",
     data() {
       return {};
@@ -90,18 +90,18 @@ if (uni.restoreGlobal) {
     },
     methods: {}
   };
-  function _sfc_render$4(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$5(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock("view", { class: "content" }, [
       vue.createElementVNode("view", { class: "text-area" }, [
         vue.createElementVNode("button", null, "\u6211\u662F\u7EC4\u4EF6")
       ])
     ]);
   }
-  var __easycom_0 = /* @__PURE__ */ _export_sfc(_sfc_main$5, [["render", _sfc_render$4], ["__file", "/Users/sunlianzheng/Sites/my-app/myuni/myuni/components/mytab/mytab.vue"]]);
+  var __easycom_0 = /* @__PURE__ */ _export_sfc(_sfc_main$6, [["render", _sfc_render$5], ["__file", "/Users/sunlianzheng/Sites/my-app/myuni/myuni/components/mytab/mytab.vue"]]);
   function resolveEasycom(component, easycom) {
     return shared.isString(component) ? easycom : component;
   }
-  const _sfc_main$4 = {
+  const _sfc_main$5 = {
     data() {
       return {
         title: "Hello1",
@@ -112,31 +112,39 @@ if (uni.restoreGlobal) {
     },
     methods: {
       say: function() {
-        formatAppLog("log", "at pages/index/index.vue:26", "123", this.$Router);
-        this.$Router.push({
-          name: "user",
-          params: {
-            name: "Joseph",
-            age: 22
-          }
+        formatAppLog("log", "at pages/index/index.vue:26", "123");
+        uni.navigateTo({
+          url: "/pages/details/details?data='\u6211\u662F\u4ECE index \u9875\u9762\u4F20\u8FC7\u6765\u7684\u503C'",
+          animationType: "pop-in",
+          animationDuration: 2e3
         });
       }
     }
   };
-  function _sfc_render$3(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$4(_ctx, _cache, $props, $setup, $data, $options) {
     const _component_mytab = resolveEasycom(vue.resolveDynamicComponent("mytab"), __easycom_0);
     return vue.openBlock(), vue.createElementBlock("view", { class: "content" }, [
       vue.createElementVNode("view", { class: "text-area" }, [
         vue.createElementVNode("text", { class: "title" }, vue.toDisplayString($data.title), 1),
         vue.createElementVNode("button", {
           onClick: _cache[0] || (_cache[0] = (...args) => $options.say && $options.say(...args))
-        }, "\u8DF3\u8F6C\u5230user"),
+        }, "\u8DF3\u8F6C\u5230details"),
         vue.createVNode(_component_mytab),
         vue.createCommentVNode(' <uni-rate v-model="value" /> ')
       ])
     ]);
   }
-  var PagesIndexIndex = /* @__PURE__ */ _export_sfc(_sfc_main$4, [["render", _sfc_render$3], ["__file", "/Users/sunlianzheng/Sites/my-app/myuni/myuni/pages/index/index.vue"]]);
+  var PagesIndexIndex = /* @__PURE__ */ _export_sfc(_sfc_main$5, [["render", _sfc_render$4], ["__file", "/Users/sunlianzheng/Sites/my-app/myuni/myuni/pages/index/index.vue"]]);
+  const _sfc_main$4 = {
+    data() {
+      return {};
+    },
+    methods: {}
+  };
+  function _sfc_render$3(_ctx, _cache, $props, $setup, $data, $options) {
+    return vue.openBlock(), vue.createElementBlock("view", null, " list ");
+  }
+  var PagesListList = /* @__PURE__ */ _export_sfc(_sfc_main$4, [["render", _sfc_render$3], ["__file", "/Users/sunlianzheng/Sites/my-app/myuni/myuni/pages/list/list.vue"]]);
   const _sfc_main$3 = {
     data() {
       return {};
@@ -144,9 +152,9 @@ if (uni.restoreGlobal) {
     methods: {}
   };
   function _sfc_render$2(_ctx, _cache, $props, $setup, $data, $options) {
-    return vue.openBlock(), vue.createElementBlock("view", null, " list ");
+    return vue.openBlock(), vue.createElementBlock("view", null, " find ");
   }
-  var PagesListList = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["render", _sfc_render$2], ["__file", "/Users/sunlianzheng/Sites/my-app/myuni/myuni/pages/list/list.vue"]]);
+  var PagesFindFind = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["render", _sfc_render$2], ["__file", "/Users/sunlianzheng/Sites/my-app/myuni/myuni/pages/find/find.vue"]]);
   const _sfc_main$2 = {
     data() {
       return {};
@@ -154,23 +162,39 @@ if (uni.restoreGlobal) {
     methods: {}
   };
   function _sfc_render$1(_ctx, _cache, $props, $setup, $data, $options) {
-    return vue.openBlock(), vue.createElementBlock("view", null, " find ");
-  }
-  var PagesFindFind = /* @__PURE__ */ _export_sfc(_sfc_main$2, [["render", _sfc_render$1], ["__file", "/Users/sunlianzheng/Sites/my-app/myuni/myuni/pages/find/find.vue"]]);
-  const _sfc_main$1 = {
-    data() {
-      return {};
-    },
-    methods: {}
-  };
-  function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock("view", null, " cart ");
   }
-  var PagesCartCart = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["render", _sfc_render], ["__file", "/Users/sunlianzheng/Sites/my-app/myuni/myuni/pages/cart/cart.vue"]]);
+  var PagesCartCart = /* @__PURE__ */ _export_sfc(_sfc_main$2, [["render", _sfc_render$1], ["__file", "/Users/sunlianzheng/Sites/my-app/myuni/myuni/pages/cart/cart.vue"]]);
+  const _sfc_main$1 = {
+    data() {
+      return {
+        text: "\u6CA1\u4EBA\u7ED9\u6211\u4F20\u53C2\u6570"
+      };
+    },
+    onLoad(options) {
+      this.text = options.data;
+    },
+    methods: {
+      back: function() {
+        uni.navigateBack();
+      }
+    }
+  };
+  function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
+    return vue.openBlock(), vue.createElementBlock("view", null, [
+      vue.createTextVNode(" Details: "),
+      vue.createElementVNode("text", null, vue.toDisplayString($data.text), 1),
+      vue.createElementVNode("button", {
+        onClick: _cache[0] || (_cache[0] = (...args) => $options.back && $options.back(...args))
+      }, "\u8FD4\u56DE")
+    ]);
+  }
+  var PagesDetailsDetails = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["render", _sfc_render], ["__file", "/Users/sunlianzheng/Sites/my-app/myuni/myuni/pages/details/details.vue"]]);
   __definePage("pages/index/index", PagesIndexIndex);
   __definePage("pages/list/list", PagesListList);
   __definePage("pages/find/find", PagesFindFind);
   __definePage("pages/cart/cart", PagesCartCart);
+  __definePage("pages/details/details", PagesDetailsDetails);
   const _sfc_main = {
     onLaunch: function() {
       formatAppLog("log", "at App.vue:4", "App Launch123");

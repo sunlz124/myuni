@@ -2,7 +2,7 @@
 	<view class="content">
 		<view class="text-area">
 			<text class="title">{{title}}</text>
-			<button @click="say">跳转到user</button>
+			<button @click="say">跳转到details</button>
 			<mytab></mytab>
 			<!-- <uni-rate v-model="value" /> -->
 		</view>
@@ -23,15 +23,15 @@
 		},
 		methods: {
 			say:function(){
-				console.log('123',this.$Router)
+				console.log('123')
 				//通过name方式跳转
-				this.$Router.push({
-					name: 'user',
-					params: {
-						name: 'Joseph',
-						age: 22
-					}
+				uni.navigateTo({
+					url: '/pages/details/details' + "?data='我是从 index 页面传过来的值'",
+					// url:'/pages/details/details',
+					animationType: 'pop-in',
+					animationDuration: 2000
 				})
+
 			}
 		}
 	}
