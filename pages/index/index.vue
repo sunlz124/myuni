@@ -1,24 +1,38 @@
 <template>
 	<view class="content">
-		<image class="logo" src="/static/logo.png"></image>
 		<view class="text-area">
 			<text class="title">{{title}}</text>
+			<button @click="say">跳转到user</button>
+			<mytab></mytab>
+			<!-- <uni-rate v-model="value" /> -->
 		</view>
 	</view>
 </template>
 
 <script>
+	// import uniBadge from "@/components/uni-badge/uni-badge.vue"
 	export default {
 		data() {
 			return {
-				title: 'Hello'
+				title: 'Hello1',
+				value:2
 			}
 		},
 		onLoad() {
 
 		},
 		methods: {
-
+			say:function(){
+				console.log('123',this.$Router)
+				//通过name方式跳转
+				this.$Router.push({
+					name: 'user',
+					params: {
+						name: 'Joseph',
+						age: 22
+					}
+				})
+			}
 		}
 	}
 </script>

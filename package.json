@@ -1,0 +1,23 @@
+{
+  "name": "myuni",
+  "version": "1.0.0",
+  "main": "main.js",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/sunlz124/myuni.git"
+  },
+  "author": "fanqie <youxivip666@163.com>",
+  "license": "MIT",
+  "description": "",
+  "bugs": {
+    "url": "https://github.com/sunlz124/myuni/issues"
+  },
+  "homepage": "https://github.com/sunlz124/myuni#readme",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "uni-read-pages": "^1.0.5",
+    "uni-simple-router": "^2.0.8-beta.4"
+  }
+}
