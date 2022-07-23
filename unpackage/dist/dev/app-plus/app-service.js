@@ -26,8 +26,32 @@ if (typeof uni !== "undefined" && uni && uni.requireGlobal) {
 if (uni.restoreGlobal) {
   uni.restoreGlobal(Vue, weex, plus, setTimeout, clearTimeout, setInterval, clearInterval);
 }
-(function(shared, vue) {
+(function(vue, shared) {
   "use strict";
+  var _export_sfc = (sfc, props) => {
+    const target = sfc.__vccOpts || sfc;
+    for (const [key, val] of props) {
+      target[key] = val;
+    }
+    return target;
+  };
+  const _sfc_main$6 = {
+    name: "mytab",
+    data() {
+      return {};
+    },
+    onLoad() {
+    },
+    methods: {}
+  };
+  function _sfc_render$4(_ctx, _cache, $props, $setup, $data, $options) {
+    return vue.openBlock(), vue.createElementBlock("view", { class: "content" }, [
+      vue.createElementVNode("view", { class: "text-area" }, [
+        vue.createElementVNode("button", null, "\u6211\u662F\u7EC4\u4EF6")
+      ])
+    ]);
+  }
+  var __easycom_0 = /* @__PURE__ */ _export_sfc(_sfc_main$6, [["render", _sfc_render$4], ["__file", "/Users/sunlianzheng/Sites/my-app/myuni/components/mytab/mytab.vue"]]);
   function isDebugMode() {
     return typeof __channelId__ === "string" && __channelId__;
   }
@@ -74,67 +98,31 @@ if (uni.restoreGlobal) {
     const res = normalizeLog(type, filename, args);
     res && console[type](res);
   }
-  var _export_sfc = (sfc, props) => {
-    const target = sfc.__vccOpts || sfc;
-    for (const [key, val] of props) {
-      target[key] = val;
-    }
-    return target;
-  };
-  const _sfc_main$6 = {
-    name: "mytab",
-    data() {
-      return {};
-    },
-    onLoad() {
-    },
-    methods: {}
-  };
-  function _sfc_render$5(_ctx, _cache, $props, $setup, $data, $options) {
-    return vue.openBlock(), vue.createElementBlock("view", { class: "content" }, [
-      vue.createElementVNode("view", { class: "text-area" }, [
-        vue.createElementVNode("button", null, "\u6211\u662F\u7EC4\u4EF6")
-      ])
-    ]);
-  }
-  var __easycom_0 = /* @__PURE__ */ _export_sfc(_sfc_main$6, [["render", _sfc_render$5], ["__file", "/Users/sunlianzheng/Sites/my-app/myuni/myuni/components/mytab/mytab.vue"]]);
   function resolveEasycom(component, easycom) {
     return shared.isString(component) ? easycom : component;
   }
   const _sfc_main$5 = {
-    data() {
-      return {
-        title: "Hello1",
-        value: 2
-      };
-    },
-    onLoad() {
-    },
-    methods: {
-      say: function() {
-        formatAppLog("log", "at pages/index/index.vue:26", "123");
+    __name: "index",
+    setup(__props) {
+      const title = "hello";
+      const say = () => {
         uni.navigateTo({
-          url: "/pages/details/details?data='\u6211\u662F\u4ECE index \u9875\u9762\u4F20\u8FC7\u6765\u7684\u503C'",
-          animationType: "pop-in",
-          animationDuration: 2e3
+          url: "/pages/details/details?data='\u6211\u662F\u4ECE index \u9875\u9762\u4F20\u8FC7\u6765\u7684\u503C'"
         });
-      }
+      };
+      return (_ctx, _cache) => {
+        const _component_mytab = resolveEasycom(vue.resolveDynamicComponent("mytab"), __easycom_0);
+        return vue.openBlock(), vue.createElementBlock("view", { class: "content" }, [
+          vue.createElementVNode("view", { class: "text-area" }, [
+            vue.createElementVNode("text", { class: "title" }, vue.toDisplayString(title)),
+            vue.createElementVNode("button", { onClick: say }, "\u8DF3\u8F6C\u5230details"),
+            vue.createVNode(_component_mytab)
+          ])
+        ]);
+      };
     }
   };
-  function _sfc_render$4(_ctx, _cache, $props, $setup, $data, $options) {
-    const _component_mytab = resolveEasycom(vue.resolveDynamicComponent("mytab"), __easycom_0);
-    return vue.openBlock(), vue.createElementBlock("view", { class: "content" }, [
-      vue.createElementVNode("view", { class: "text-area" }, [
-        vue.createElementVNode("text", { class: "title" }, vue.toDisplayString($data.title), 1),
-        vue.createElementVNode("button", {
-          onClick: _cache[0] || (_cache[0] = (...args) => $options.say && $options.say(...args))
-        }, "\u8DF3\u8F6C\u5230details"),
-        vue.createVNode(_component_mytab),
-        vue.createCommentVNode(' <uni-rate v-model="value" /> ')
-      ])
-    ]);
-  }
-  var PagesIndexIndex = /* @__PURE__ */ _export_sfc(_sfc_main$5, [["render", _sfc_render$4], ["__file", "/Users/sunlianzheng/Sites/my-app/myuni/myuni/pages/index/index.vue"]]);
+  var PagesIndexIndex = /* @__PURE__ */ _export_sfc(_sfc_main$5, [["__file", "/Users/sunlianzheng/Sites/my-app/myuni/pages/index/index.vue"]]);
   const _sfc_main$4 = {
     data() {
       return {};
@@ -144,7 +132,7 @@ if (uni.restoreGlobal) {
   function _sfc_render$3(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock("view", null, " list ");
   }
-  var PagesListList = /* @__PURE__ */ _export_sfc(_sfc_main$4, [["render", _sfc_render$3], ["__file", "/Users/sunlianzheng/Sites/my-app/myuni/myuni/pages/list/list.vue"]]);
+  var PagesListList = /* @__PURE__ */ _export_sfc(_sfc_main$4, [["render", _sfc_render$3], ["__file", "/Users/sunlianzheng/Sites/my-app/myuni/pages/list/list.vue"]]);
   const _sfc_main$3 = {
     data() {
       return {};
@@ -154,7 +142,7 @@ if (uni.restoreGlobal) {
   function _sfc_render$2(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock("view", null, " find ");
   }
-  var PagesFindFind = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["render", _sfc_render$2], ["__file", "/Users/sunlianzheng/Sites/my-app/myuni/myuni/pages/find/find.vue"]]);
+  var PagesFindFind = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["render", _sfc_render$2], ["__file", "/Users/sunlianzheng/Sites/my-app/myuni/pages/find/find.vue"]]);
   const _sfc_main$2 = {
     data() {
       return {};
@@ -164,7 +152,7 @@ if (uni.restoreGlobal) {
   function _sfc_render$1(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock("view", null, " cart ");
   }
-  var PagesCartCart = /* @__PURE__ */ _export_sfc(_sfc_main$2, [["render", _sfc_render$1], ["__file", "/Users/sunlianzheng/Sites/my-app/myuni/myuni/pages/cart/cart.vue"]]);
+  var PagesCartCart = /* @__PURE__ */ _export_sfc(_sfc_main$2, [["render", _sfc_render$1], ["__file", "/Users/sunlianzheng/Sites/my-app/myuni/pages/cart/cart.vue"]]);
   const _sfc_main$1 = {
     data() {
       return {
@@ -189,7 +177,7 @@ if (uni.restoreGlobal) {
       }, "\u8FD4\u56DE")
     ]);
   }
-  var PagesDetailsDetails = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["render", _sfc_render], ["__file", "/Users/sunlianzheng/Sites/my-app/myuni/myuni/pages/details/details.vue"]]);
+  var PagesDetailsDetails = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["render", _sfc_render], ["__file", "/Users/sunlianzheng/Sites/my-app/myuni/pages/details/details.vue"]]);
   __definePage("pages/index/index", PagesIndexIndex);
   __definePage("pages/list/list", PagesListList);
   __definePage("pages/find/find", PagesFindFind);
@@ -206,7 +194,7 @@ if (uni.restoreGlobal) {
       formatAppLog("log", "at App.vue:10", "App Hide");
     }
   };
-  var App = /* @__PURE__ */ _export_sfc(_sfc_main, [["__file", "/Users/sunlianzheng/Sites/my-app/myuni/myuni/App.vue"]]);
+  var App = /* @__PURE__ */ _export_sfc(_sfc_main, [["__file", "/Users/sunlianzheng/Sites/my-app/myuni/App.vue"]]);
   function createApp() {
     const app = vue.createVueApp(App);
     return {
@@ -221,4 +209,4 @@ if (uni.restoreGlobal) {
   __app__._component.render = () => {
   };
   __app__.mount("#app");
-})(uni.VueShared, Vue);
+})(Vue, uni.VueShared);

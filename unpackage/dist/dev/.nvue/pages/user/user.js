@@ -25,5 +25,5 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
     ])
   ]);
 }
-var user = /* @__PURE__ */ _export_sfc(_sfc_main, [["render", _sfc_render], ["__file", "/Users/sunlianzheng/Sites/my-app/myuni/myuni/pages/user/user.nvue"]]);
+var user = /* @__PURE__ */ _export_sfc(_sfc_main, [["render", _sfc_render], ["__file", "/Users/sunlianzheng/Sites/my-app/myuni/pages/user/user.nvue"]]);
 export { user as default };

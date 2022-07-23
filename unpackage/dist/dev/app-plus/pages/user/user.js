@@ -56,7 +56,7 @@ if (typeof uni !== 'undefined' && uni && uni.requireGlobal) {
     }
   });
 
-  // ../../../../../../Users/sunlianzheng/Sites/my-app/myuni/myuni/unpackage/dist/dev/.nvue/pages/user/user.js
+  // ../../../../../../Users/sunlianzheng/Sites/my-app/myuni/unpackage/dist/dev/.nvue/pages/user/user.js
   var import_vue = __toESM(require_vue());
   var _export_sfc = (sfc, props) => {
     const target = sfc.__vccOpts || sfc;
@@ -84,7 +84,7 @@ if (typeof uni !== 'undefined' && uni && uni.requireGlobal) {
       ])
     ]);
   }
-  var user = /* @__PURE__ */ _export_sfc(_sfc_main, [["render", _sfc_render], ["__file", "/Users/sunlianzheng/Sites/my-app/myuni/myuni/pages/user/user.nvue"]]);
+  var user = /* @__PURE__ */ _export_sfc(_sfc_main, [["render", _sfc_render], ["__file", "/Users/sunlianzheng/Sites/my-app/myuni/pages/user/user.nvue"]]);
 
   // <stdin>
   var webview = plus.webview.currentWebview();
