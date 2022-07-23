@@ -1,11 +1,13 @@
 <template>
 	<view class="content">
+        <homesearch></homesearch>
+        <homeswiper></homeswiper>
 		<view class="text-area">
 			<text class="title">{{title}}</text>
 			<button @click="say">跳转到details</button>
-			<mytab></mytab>
 		</view>
 	</view>
+    
 </template>
 
 <script setup>

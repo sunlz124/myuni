@@ -35,23 +35,20 @@ if (uni.restoreGlobal) {
     }
     return target;
   };
-  const _sfc_main$6 = {
-    name: "mytab",
-    data() {
-      return {};
-    },
-    onLoad() {
-    },
-    methods: {}
-  };
-  function _sfc_render$4(_ctx, _cache, $props, $setup, $data, $options) {
+  const _sfc_main$7 = {};
+  function _sfc_render$4(_ctx, _cache) {
     return vue.openBlock(), vue.createElementBlock("view", { class: "content" }, [
-      vue.createElementVNode("view", { class: "text-area" }, [
-        vue.createElementVNode("button", null, "\u6211\u662F\u7EC4\u4EF6")
+      vue.createElementVNode("view", { class: "left" }, [
+        vue.createElementVNode("i", { class: "Hui-iconfont" }, "\uE665"),
+        vue.createElementVNode("text", null, "\u63A8\u8350\u8D2D\u4E70\u7684\u5546\u54C1")
+      ]),
+      vue.createElementVNode("view", { class: "right" }, [
+        vue.createElementVNode("i", { class: "Hui-iconfont" }, "\uE640"),
+        vue.createElementVNode("i", { class: "Hui-iconfont" }, "\uE640")
       ])
     ]);
   }
-  var __easycom_0 = /* @__PURE__ */ _export_sfc(_sfc_main$6, [["render", _sfc_render$4], ["__file", "/Users/sunlianzheng/Sites/my-app/myuni/components/mytab/mytab.vue"]]);
+  var __easycom_0 = /* @__PURE__ */ _export_sfc(_sfc_main$7, [["render", _sfc_render$4], ["__scopeId", "data-v-713abd38"], ["__file", "/Users/sunlianzheng/Sites/my-app/myuni/components/homesearch/homesearch.vue"]]);
   function isDebugMode() {
     return typeof __channelId__ === "string" && __channelId__;
   }
@@ -101,6 +98,43 @@ if (uni.restoreGlobal) {
   function resolveEasycom(component, easycom) {
     return shared.isString(component) ? easycom : component;
   }
+  const _sfc_main$6 = {
+    __name: "homeswiper",
+    setup(__props) {
+      uni.screenWidth;
+      const list = [
+        "https://storage.360buyimg.com/jdc-article/NutUItaro34.jpg",
+        "https://storage.360buyimg.com/jdc-article/NutUItaro2.jpg",
+        "https://storage.360buyimg.com/jdc-article/welcomenutui.jpg",
+        "https://storage.360buyimg.com/jdc-article/fristfabu.jpg"
+      ];
+      const indicatorDots = true;
+      const autoplay = true;
+      vue.ref(0);
+      return (_ctx, _cache) => {
+        return vue.openBlock(), vue.createElementBlock(vue.Fragment, null, [
+          vue.createElementVNode("swiper", {
+            class: "swiper",
+            circular: "",
+            "indicator-dots": indicatorDots,
+            autoplay
+          }, [
+            (vue.openBlock(), vue.createElementBlock(vue.Fragment, null, vue.renderList(list, (item, index) => {
+              return vue.createElementVNode("swiper-item", {
+                key: index,
+                class: "swiper-item",
+                mode: "widthFix"
+              }, [
+                vue.createElementVNode("image", { src: item }, null, 8, ["src"])
+              ]);
+            }), 64))
+          ]),
+          vue.createCommentVNode(' <view class="content">\n        <text>1212</text>\n       <text>{{n}}</text>\n        <button @click="add">\u52A0</button>\n        <text>{{a}}11111</text>\n    </view> ')
+        ], 2112);
+      };
+    }
+  };
+  var __easycom_1 = /* @__PURE__ */ _export_sfc(_sfc_main$6, [["__scopeId", "data-v-a8068138"], ["__file", "/Users/sunlianzheng/Sites/my-app/myuni/components/homeswiper/homeswiper.vue"]]);
   const _sfc_main$5 = {
     __name: "index",
     setup(__props) {
@@ -111,12 +145,14 @@ if (uni.restoreGlobal) {
         });
       };
       return (_ctx, _cache) => {
-        const _component_mytab = resolveEasycom(vue.resolveDynamicComponent("mytab"), __easycom_0);
+        const _component_homesearch = resolveEasycom(vue.resolveDynamicComponent("homesearch"), __easycom_0);
+        const _component_homeswiper = resolveEasycom(vue.resolveDynamicComponent("homeswiper"), __easycom_1);
         return vue.openBlock(), vue.createElementBlock("view", { class: "content" }, [
+          vue.createVNode(_component_homesearch),
+          vue.createVNode(_component_homeswiper),
           vue.createElementVNode("view", { class: "text-area" }, [
             vue.createElementVNode("text", { class: "title" }, vue.toDisplayString(title)),
-            vue.createElementVNode("button", { onClick: say }, "\u8DF3\u8F6C\u5230details"),
-            vue.createVNode(_component_mytab)
+            vue.createElementVNode("button", { onClick: say }, "\u8DF3\u8F6C\u5230details")
           ])
         ]);
       };
@@ -185,13 +221,13 @@ if (uni.restoreGlobal) {
   __definePage("pages/details/details", PagesDetailsDetails);
   const _sfc_main = {
     onLaunch: function() {
-      formatAppLog("log", "at App.vue:4", "App Launch123");
+      formatAppLog("log", "at App.vue:5", "App Launch123");
     },
     onShow: function() {
-      formatAppLog("log", "at App.vue:7", "App Show");
+      formatAppLog("log", "at App.vue:8", "App Show");
     },
     onHide: function() {
-      formatAppLog("log", "at App.vue:10", "App Hide");
+      formatAppLog("log", "at App.vue:11", "App Hide");
     }
   };
   var App = /* @__PURE__ */ _export_sfc(_sfc_main, [["__file", "/Users/sunlianzheng/Sites/my-app/myuni/App.vue"]]);
