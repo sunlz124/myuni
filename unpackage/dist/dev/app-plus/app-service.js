@@ -26,8 +26,29 @@ if (typeof uni !== "undefined" && uni && uni.requireGlobal) {
 if (uni.restoreGlobal) {
   uni.restoreGlobal(Vue, weex, plus, setTimeout, clearTimeout, setInterval, clearInterval);
 }
-(function(shared, vue) {
+(function(vue, shared) {
   "use strict";
+  var _export_sfc = (sfc, props) => {
+    const target = sfc.__vccOpts || sfc;
+    for (const [key, val] of props) {
+      target[key] = val;
+    }
+    return target;
+  };
+  const _sfc_main$c = {
+    __name: "textline",
+    props: {
+      text: {
+        default: ""
+      }
+    },
+    setup(__props) {
+      return (_ctx, _cache) => {
+        return vue.openBlock(), vue.createElementBlock("text", { class: "line" }, vue.toDisplayString(__props.text), 1);
+      };
+    }
+  };
+  var __easycom_0 = /* @__PURE__ */ _export_sfc(_sfc_main$c, [["__scopeId", "data-v-6b001f24"], ["__file", "/Users/sunlianzheng/Sites/my-app/myapp/components/textline/textline.vue"]]);
   function isDebugMode() {
     return typeof __channelId__ === "string" && __channelId__;
   }
@@ -74,14 +95,85 @@ if (uni.restoreGlobal) {
     const res = normalizeLog(type, filename, args);
     res && console[type](res);
   }
-  var _export_sfc = (sfc, props) => {
-    const target = sfc.__vccOpts || sfc;
-    for (const [key, val] of props) {
-      target[key] = val;
+  function resolveEasycom(component, easycom) {
+    return shared.isString(component) ? easycom : component;
+  }
+  const _sfc_main$b = {
+    __name: "productlist",
+    setup(__props) {
+      const list = [
+        {
+          title: "\u7A7A\u8C03\uFF0C\u5F15\u9886\u822A\u5929\u79D1\u6280\uFF0C\u7A7A\u8C03\uFF0C\u5F15\u9886\u822A\u5929\u79D1\u6280\u7A7A\u8C03\uFF0C\u5F15\u9886\u822A\u5929\u79D1\u6280\u7A7A\u8C03\uFF0C\u5F15\u9886\u822A\u5929\u79D1\u6280\u7A7A\u8C03\uFF0C\u5F15\u9886\u822A\u5929\u79D1\u6280\u7A7A\u8C03\uFF0C\u5F15\u9886\u822A\u5929\u79D1\u6280",
+          url: "https://m.360buyimg.com/mobilecms/s750x750_jfs/t1/117696/37/26850/439895/62da4c07E0e4c4d9a/3647cc2eb98d74d0.jpg!q80.dpg",
+          price: "9999"
+        },
+        {
+          title: "\u7A7A\u8C03\uFF0C\u5F15\u9886\u822A\u5929\u79D1\u6280",
+          url: "https://m.360buyimg.com/mobilecms/s750x750_jfs/t1/117696/37/26850/439895/62da4c07E0e4c4d9a/3647cc2eb98d74d0.jpg!q80.dpg",
+          price: "9999"
+        },
+        {
+          title: "\u7A7A\u8C03\uFF0C\u5F15\u9886\u822A\u5929\u79D1\u6280\uFF0C\u7A7A\u8C03\uFF0C\u5F15\u9886\u822A\u5929\u79D1\u6280\u7A7A\u8C03\uFF0C\u5F15\u9886\u822A\u5929\u79D1\u6280\u7A7A\u8C03\uFF0C\u5F15\u9886\u822A\u5929\u79D1\u6280\u7A7A\u8C03\uFF0C\u5F15\u9886\u822A\u5929\u79D1\u6280\u7A7A\u8C03\uFF0C\u5F15\u9886\u822A\u5929\u79D1\u6280",
+          url: "https://m.360buyimg.com/mobilecms/s750x750_jfs/t1/117696/37/26850/439895/62da4c07E0e4c4d9a/3647cc2eb98d74d0.jpg!q80.dpg",
+          price: "9999"
+        },
+        {
+          title: "\u7A7A\u8C03\uFF0C\u5F15\u9886\u822A\u5929\u79D1\u6280\uFF0C\u7A7A\u8C03\uFF0C\u5F15\u9886\u822A\u5929\u79D1\u6280\u7A7A\u8C03\uFF0C\u5F15\u9886\u822A\u5929\u79D1\u6280\u7A7A\u8C03\uFF0C\u5F15\u9886\u822A\u5929\u79D1\u6280\u7A7A\u8C03\uFF0C\u5F15\u9886\u822A\u5929\u79D1\u6280\u7A7A\u8C03\uFF0C\u5F15\u9886\u822A\u5929\u79D1\u6280",
+          url: "https://m.360buyimg.com/mobilecms/s750x750_jfs/t1/117696/37/26850/439895/62da4c07E0e4c4d9a/3647cc2eb98d74d0.jpg!q80.dpg",
+          price: "9999"
+        },
+        {
+          title: "\u7A7A\u8C03\uFF0C\u5F15\u9886\u822A\u5929\u79D1\u6280\uFF0C\u7A7A\u8C03\uFF0C\u5F15\u9886\u822A\u5929\u79D1\u6280\u7A7A\u8C03\uFF0C\u5F15\u9886\u822A\u5929\u79D1\u6280\u7A7A\u8C03\uFF0C\u5F15\u9886\u822A\u5929\u79D1\u6280\u7A7A\u8C03\uFF0C\u5F15\u9886\u822A\u5929\u79D1\u6280\u7A7A\u8C03\uFF0C\u5F15\u9886\u822A\u5929\u79D1\u6280",
+          url: "https://m.360buyimg.com/mobilecms/s750x750_jfs/t1/117696/37/26850/439895/62da4c07E0e4c4d9a/3647cc2eb98d74d0.jpg!q80.dpg",
+          price: "9999"
+        },
+        {
+          title: "\u7A7A\u8C03\uFF0C\u5F15\u9886\u822A\u5929\u79D1\u6280\uFF0C\u7A7A\u8C03\uFF0C\u5F15\u9886\u822A\u5929\u79D1\u6280\u7A7A\u8C03\uFF0C\u5F15\u9886\u822A\u5929\u79D1\u6280\u7A7A\u8C03\uFF0C\u5F15\u9886\u822A\u5929\u79D1\u6280\u7A7A\u8C03\uFF0C\u5F15\u9886\u822A\u5929\u79D1\u6280\u7A7A\u8C03\uFF0C\u5F15\u9886\u822A\u5929\u79D1\u6280",
+          url: "https://m.360buyimg.com/mobilecms/s750x750_jfs/t1/117696/37/26850/439895/62da4c07E0e4c4d9a/3647cc2eb98d74d0.jpg!q80.dpg",
+          price: "9999"
+        },
+        {
+          title: "\u7A7A\u8C03\uFF0C\u5F15\u9886\u822A\u5929\u79D1\u6280\uFF0C\u7A7A\u8C03\uFF0C\u5F15\u9886\u822A\u5929\u79D1\u6280\u7A7A\u8C03\uFF0C\u5F15\u9886\u822A\u5929\u79D1\u6280\u7A7A\u8C03\uFF0C\u5F15\u9886\u822A\u5929\u79D1\u6280\u7A7A\u8C03\uFF0C\u5F15\u9886\u822A\u5929\u79D1\u6280\u7A7A\u8C03\uFF0C\u5F15\u9886\u822A\u5929\u79D1\u6280",
+          url: "https://m.360buyimg.com/mobilecms/s750x750_jfs/t1/117696/37/26850/439895/62da4c07E0e4c4d9a/3647cc2eb98d74d0.jpg!q80.dpg",
+          price: "9999"
+        },
+        {
+          title: "\u7A7A\u8C03\uFF0C\u5F15\u9886\u822A\u5929\u79D1\u6280\uFF0C\u7A7A\u8C03\uFF0C\u5F15\u9886\u822A\u5929\u79D1\u6280\u7A7A\u8C03\uFF0C\u5F15\u9886\u822A\u5929\u79D1\u6280\u7A7A\u8C03\uFF0C\u5F15\u9886\u822A\u5929\u79D1\u6280\u7A7A\u8C03\uFF0C\u5F15\u9886\u822A\u5929\u79D1\u6280\u7A7A\u8C03\uFF0C\u5F15\u9886\u822A\u5929\u79D1\u6280",
+          url: "https://m.360buyimg.com/mobilecms/s750x750_jfs/t1/117696/37/26850/439895/62da4c07E0e4c4d9a/3647cc2eb98d74d0.jpg!q80.dpg",
+          price: "9999"
+        }
+      ];
+      const click = (text) => {
+        uni.navigateTo({
+          url: `../details/details?data=${text}`
+        });
+      };
+      return (_ctx, _cache) => {
+        return vue.openBlock(), vue.createElementBlock("view", { class: "content" }, [
+          (vue.openBlock(), vue.createElementBlock(vue.Fragment, null, vue.renderList(list, (item, index) => {
+            return vue.createElementVNode("view", {
+              key: index,
+              class: "item",
+              onClick: ($event) => click(item.title)
+            }, [
+              vue.createElementVNode("image", {
+                src: item.url
+              }, null, 8, ["src"]),
+              vue.createElementVNode("view", { class: "body" }, [
+                vue.createElementVNode("text", { class: "title" }, vue.toDisplayString(item.title), 1),
+                vue.createElementVNode("view", { class: "other" }, [
+                  vue.createElementVNode("text", { class: "price" }, "\xA5" + vue.toDisplayString(item.price), 1),
+                  vue.createElementVNode("text", { class: "Hui-iconfont button" }, "\uE600")
+                ])
+              ])
+            ], 8, ["onClick"]);
+          }), 64))
+        ]);
+      };
     }
-    return target;
   };
-  const _sfc_main$8 = {
+  var __easycom_1 = /* @__PURE__ */ _export_sfc(_sfc_main$b, [["__scopeId", "data-v-78cba620"], ["__file", "/Users/sunlianzheng/Sites/my-app/myapp/components/productlist/productlist.vue"]]);
+  const _sfc_main$a = {
     __name: "homesearch",
     setup(__props) {
       const list = [
@@ -97,40 +189,40 @@ if (uni.restoreGlobal) {
       };
       return (_ctx, _cache) => {
         return vue.openBlock(), vue.createElementBlock("view", { class: "content" }, [
-          vue.createElementVNode("view", { class: "left" }, [
-            vue.createElementVNode("i", { class: "Hui-iconfont" }, "\uE665"),
-            vue.createElementVNode("swiper", {
-              class: "swiper",
-              circular: "",
-              vertical: "",
-              autoplay: "",
-              disableTouch: ""
-            }, [
-              (vue.openBlock(), vue.createElementBlock(vue.Fragment, null, vue.renderList(list, (item, index) => {
-                return vue.createElementVNode("swiper-item", {
-                  class: "swiper-item",
-                  key: index
-                }, [
-                  vue.createElementVNode("text", {
-                    onClick: ($event) => clickSearchKey(item)
-                  }, vue.toDisplayString(item), 9, ["onClick"])
-                ]);
-              }), 64))
+          vue.createElementVNode("view", { class: "status_bar" }),
+          vue.createElementVNode("view", { class: "search" }, [
+            vue.createElementVNode("view", { class: "left" }, [
+              vue.createElementVNode("i", { class: "Hui-iconfont" }, "\uE665"),
+              vue.createElementVNode("swiper", {
+                class: "swiper",
+                circular: "",
+                vertical: "",
+                autoplay: "",
+                disableTouch: ""
+              }, [
+                (vue.openBlock(), vue.createElementBlock(vue.Fragment, null, vue.renderList(list, (item, index) => {
+                  return vue.createElementVNode("swiper-item", {
+                    class: "swiper-item",
+                    key: index
+                  }, [
+                    vue.createElementVNode("text", {
+                      onClick: ($event) => clickSearchKey(item)
+                    }, vue.toDisplayString(item), 9, ["onClick"])
+                  ]);
+                }), 64))
+              ])
+            ]),
+            vue.createElementVNode("view", { class: "right" }, [
+              vue.createElementVNode("i", { class: "Hui-iconfont" }, "\uE650"),
+              vue.createElementVNode("i", { class: "Hui-iconfont" }, "\uE682")
             ])
-          ]),
-          vue.createElementVNode("view", { class: "right" }, [
-            vue.createElementVNode("i", { class: "Hui-iconfont" }, "\uE650"),
-            vue.createElementVNode("i", { class: "Hui-iconfont" }, "\uE682")
           ])
         ]);
       };
     }
   };
-  var __easycom_0 = /* @__PURE__ */ _export_sfc(_sfc_main$8, [["__scopeId", "data-v-713abd38"], ["__file", "/Users/sunlianzheng/Sites/my-app/myapp/components/homesearch/homesearch.vue"]]);
-  function resolveEasycom(component, easycom) {
-    return shared.isString(component) ? easycom : component;
-  }
-  const _sfc_main$7 = {
+  var homesearch = /* @__PURE__ */ _export_sfc(_sfc_main$a, [["__scopeId", "data-v-60e4120c"], ["__file", "/Users/sunlianzheng/Sites/my-app/myapp/pages/index/components/homesearch.vue"]]);
+  const _sfc_main$9 = {
     __name: "homeswiper",
     setup(__props) {
       const list = [
@@ -141,7 +233,6 @@ if (uni.restoreGlobal) {
       ];
       const indicatorDots = true;
       const autoplay = true;
-      vue.ref(0);
       return (_ctx, _cache) => {
         return vue.openBlock(), vue.createElementBlock(vue.Fragment, null, [
           vue.createElementVNode("swiper", {
@@ -160,31 +251,143 @@ if (uni.restoreGlobal) {
               ]);
             }), 64))
           ]),
-          vue.createCommentVNode(' <view class="content">\n        <text>1212</text>\n       <text>{{n}}</text>\n        <button @click="add">\u52A0</button>\n        <text>{{a}}11111</text>\n    </view> ')
+          vue.createCommentVNode(' <view class="content">\n        <text>1212</text>\n       <text>{{n}}</text>\n        <button @click="add">\u52A0</button>\n    </view> ')
         ], 2112);
       };
     }
   };
-  var __easycom_1 = /* @__PURE__ */ _export_sfc(_sfc_main$7, [["__scopeId", "data-v-a8068138"], ["__file", "/Users/sunlianzheng/Sites/my-app/myapp/components/homeswiper/homeswiper.vue"]]);
+  var homeswiper = /* @__PURE__ */ _export_sfc(_sfc_main$9, [["__scopeId", "data-v-159151ca"], ["__file", "/Users/sunlianzheng/Sites/my-app/myapp/pages/index/components/homeswiper.vue"]]);
+  const _sfc_main$8 = {
+    __name: "topten",
+    setup(__props) {
+      const list = [
+        "\u9762\u5305",
+        "\u725B\u5976",
+        "\u852C\u83DC",
+        "\u751F\u9C9C",
+        "\u6C34\u4EA7",
+        "\u6C34\u679C",
+        "\u624B\u529E",
+        "\u6BCD\u5A74",
+        "\u5C71\u8D27",
+        "\u575A\u679C"
+      ];
+      const click = (keyword) => {
+        uni.navigateTo({
+          url: `../search/search?keyWord=${keyword}`
+        });
+      };
+      return (_ctx, _cache) => {
+        return vue.openBlock(), vue.createElementBlock("view", { class: "content" }, [
+          (vue.openBlock(), vue.createElementBlock(vue.Fragment, null, vue.renderList(list, (item, index) => {
+            return vue.createElementVNode("view", {
+              key: index,
+              class: "item Hui-iconfont",
+              onClick: ($event) => click(item)
+            }, [
+              vue.createElementVNode("icon", { class: "icon" }, "\uE669"),
+              vue.createElementVNode("text", { class: "text" }, vue.toDisplayString(item), 1)
+            ], 8, ["onClick"]);
+          }), 64))
+        ]);
+      };
+    }
+  };
+  var topten = /* @__PURE__ */ _export_sfc(_sfc_main$8, [["__scopeId", "data-v-05da214a"], ["__file", "/Users/sunlianzheng/Sites/my-app/myapp/pages/index/components/topten.vue"]]);
+  const _sfc_main$7 = {
+    __name: "seckill",
+    setup(__props) {
+      const list = [
+        "https://m.360buyimg.com/mobilecms/s750x750_jfs/t1/117696/37/26850/439895/62da4c07E0e4c4d9a/3647cc2eb98d74d0.jpg!q80.dpg",
+        "https://m.360buyimg.com/mobilecms/s750x750_jfs/t1/117696/37/26850/439895/62da4c07E0e4c4d9a/3647cc2eb98d74d0.jpg!q80.dpg",
+        "https://m.360buyimg.com/mobilecms/s750x750_jfs/t1/117696/37/26850/439895/62da4c07E0e4c4d9a/3647cc2eb98d74d0.jpg!q80.dpg",
+        "https://m.360buyimg.com/mobilecms/s750x750_jfs/t1/117696/37/26850/439895/62da4c07E0e4c4d9a/3647cc2eb98d74d0.jpg!q80.dpg",
+        "https://m.360buyimg.com/mobilecms/s750x750_jfs/t1/117696/37/26850/439895/62da4c07E0e4c4d9a/3647cc2eb98d74d0.jpg!q80.dpg"
+      ];
+      const isShow = vue.ref(false);
+      const tips = vue.ref("");
+      const h = vue.ref("00");
+      const m = vue.ref("00");
+      const s = vue.ref("00");
+      setInterval(() => {
+        const date = new Date();
+        const timeStart = new Date(`
+            ${new Date().getFullYear()}/
+            ${date.getMonth() + 1}/
+            ${new Date().getDate()}
+            12:
+            00:
+            00
+        `);
+        const timeEnd = new Date(`
+            ${new Date().getFullYear()}/
+            ${date.getMonth() + 1}/
+            ${new Date().getDate()}
+            14:
+            00:
+            00
+        `);
+        if (date.getHours() < timeStart.getHours()) {
+          isShow.value = true;
+          tips.value = "\u8DDD\u79BB\u6D3B\u52A8\u5F00\u59CB\u8FD8\u6709";
+          const diff = timeStart - date;
+          h.value = parseInt(diff / 1e3 / 60 / 60 % 24);
+          m.value = parseInt(diff / 1e3 / 60 % 60);
+          s.value = parseInt(diff / 1e3 % 60);
+        } else if (date.getHours() >= timeStart.getHours() && date.getHours() < timeEnd.getHours()) {
+          isShow.value = true;
+          tips.value = "\u8DDD\u79BB\u6D3B\u52A8\u7ED3\u675F\u8FD8\u6709";
+          const diff = timeEnd - date;
+          h.value = parseInt(diff / 1e3 / 60 / 60 % 24);
+          m.value = parseInt(diff / 1e3 / 60 % 60);
+          s.value = parseInt(diff / 1e3 % 60);
+        } else if (date.getHours() >= timeEnd.getHours()) {
+          isShow.value = false;
+          tips.value = "\u6D3B\u52A8\u5DF2\u7ED3\u675F";
+        }
+      }, 1e3);
+      return (_ctx, _cache) => {
+        return vue.openBlock(), vue.createElementBlock("view", { class: "content Hui-iconfont" }, [
+          vue.createElementVNode("view", { class: "header" }, [
+            vue.createElementVNode("text", { class: "title" }, [
+              vue.createTextVNode(" \u79D2\u6740 " + vue.toDisplayString(tips.value) + " ", 1),
+              vue.withDirectives(vue.createElementVNode("text", null, vue.toDisplayString(h.value) + ":" + vue.toDisplayString(m.value) + ":" + vue.toDisplayString(s.value), 513), [
+                [vue.vShow, isShow.value]
+              ])
+            ]),
+            vue.createElementVNode("text", { class: "subTitle" }, "\u8FDB\u5165\u4E13\u573A\uE6D7")
+          ]),
+          vue.createElementVNode("view", { class: "body" }, [
+            (vue.openBlock(), vue.createElementBlock(vue.Fragment, null, vue.renderList(list, (item, index) => {
+              return vue.createElementVNode("view", {
+                key: index,
+                class: "item"
+              }, [
+                vue.createElementVNode("image", { src: item }, null, 8, ["src"]),
+                vue.createElementVNode("text", { class: "price" }, "\xA5999")
+              ]);
+            }), 64))
+          ])
+        ]);
+      };
+    }
+  };
+  var seckill = /* @__PURE__ */ _export_sfc(_sfc_main$7, [["__scopeId", "data-v-2a9bdf8c"], ["__file", "/Users/sunlianzheng/Sites/my-app/myapp/pages/index/components/seckill.vue"]]);
   const _sfc_main$6 = {
     __name: "index",
     setup(__props) {
-      const say = () => {
-        uni.navigateTo({
-          url: "../details/details?data='\u6211\u662F\u4ECE index \u9875\u9762\u4F20\u8FC7\u6765\u7684\u503C'"
-        });
-        formatAppLog("log", "at pages/index/index.vue:18", "1111");
-      };
       return (_ctx, _cache) => {
-        const _component_homesearch = resolveEasycom(vue.resolveDynamicComponent("homesearch"), __easycom_0);
-        const _component_homeswiper = resolveEasycom(vue.resolveDynamicComponent("homeswiper"), __easycom_1);
-        return vue.openBlock(), vue.createElementBlock("view", { class: "content" }, [
-          vue.createVNode(_component_homesearch),
-          vue.createVNode(_component_homeswiper),
-          vue.createElementVNode("view", { class: "text-area" }, [
-            vue.createElementVNode("button", { onClick: say }, "\u8DF3\u8F6C\u5230details")
-          ]),
-          vue.createTextVNode(" 123 ")
+        const _component_textline = resolveEasycom(vue.resolveDynamicComponent("textline"), __easycom_0);
+        const _component_productlist = resolveEasycom(vue.resolveDynamicComponent("productlist"), __easycom_1);
+        return vue.openBlock(), vue.createElementBlock("view", { class: "page" }, [
+          vue.createVNode(homesearch),
+          vue.createElementVNode("view", { class: "content" }, [
+            vue.createVNode(homeswiper),
+            vue.createVNode(topten),
+            vue.createVNode(seckill),
+            vue.createVNode(_component_textline, { text: "\u70ED\u95E8\u63A8\u8350" }),
+            vue.createVNode(_component_productlist)
+          ])
         ]);
       };
     }
@@ -253,14 +456,12 @@ if (uni.restoreGlobal) {
       }
     },
     setup(__props) {
-      vue.ref("");
+      const back = () => uni.navigateBack();
       return (_ctx, _cache) => {
         return vue.openBlock(), vue.createElementBlock("view", null, [
           vue.createTextVNode(" \u6211\u662F\u641C\u7D22\u9875\u9762,\u6211\u8981\u641C\u7D22\u7684\u5173\u952E\u8BCD\u662F: "),
           vue.createElementVNode("text", null, vue.toDisplayString(__props.keyWord), 1),
-          vue.createElementVNode("button", {
-            onClick: _cache[0] || (_cache[0] = (...args) => _ctx.back && _ctx.back(...args))
-          }, "\u8FD4\u56DE")
+          vue.createElementVNode("button", { onClick: back }, "\u8FD4\u56DE")
         ]);
       };
     }
@@ -298,4 +499,4 @@ if (uni.restoreGlobal) {
   __app__._component.render = () => {
   };
   __app__.mount("#app");
-})(uni.VueShared, Vue);
+})(Vue, uni.VueShared);

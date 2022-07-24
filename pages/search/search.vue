@@ -7,29 +7,13 @@
 </template>
 
 <script setup>
-    import { ref, defineProps } from 'vue'
-    const text = ref('')
     const props = defineProps({
         keyWord:{
             default:''
         }
     })
-    // text.value = options.keyWord
-    // export default {
-    //     data() {
-    //     	return {
-    //     		text:'没人给我传参数'
-    //     	}
-    //     },
-    //     onLoad(options) {
-    //       this.text = options.keyWord
-    //     },
-    //     methods: {
-    //         back:function(){
-    //         	uni.navigateBack()
-    //         }
-    //     }
-    // }
+    const back = () => uni.navigateBack()
+    
 </script>
 
 <style>

@@ -1,33 +1,46 @@
 <template>
-	<view class="content">
+    <view class="page">
         <homesearch></homesearch>
-        <homeswiper></homeswiper>
-		<view class="text-area">
-			<button @click="say">跳转到details</button>
-		</view>
-        123
-	</view>
+        <view class="content">
+            <homeswiper></homeswiper>
+            <topten></topten>
+            <seckill></seckill>
+            <textline text="热门推荐"></textline>
+            <productlist></productlist>
+        </view>
+    </view>
+	
     
 </template>
 
 <script setup>
+    import homesearch from "./components/homesearch.vue"
+    import homeswiper from "./components/homeswiper.vue"
+    import topten from "./components/topten.vue"
+    import seckill from "./components/seckill.vue"
     const say = ()=>{
         uni.navigateTo({
         	url: '../details/details' + "?data='我是从 index 页面传过来的值'",
         })
-        console.log('1111')
     }
 </script>
 
 <style>
+    *{
+        box-sizing: border-box;
+    }
+    .page{
+        display: flex;
+        flex-direction: column;
+        background-color: #f6f6f6;
+        padding-top: calc(var(--status-bar-height) + 50px);
+    }
 	.content {
+        flex: 1;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
 	}
-	.title {
-		font-size: 36rpx;
-		color: #8f8f94;
-	}
+	
 </style>

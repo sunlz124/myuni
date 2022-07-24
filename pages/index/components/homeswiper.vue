@@ -8,12 +8,10 @@
         <text>1212</text>
        <text>{{n}}</text>
         <button @click="add">加</button>
-        <text>{{a}}11111</text>
     </view> -->
 </template>
 
 <script setup>
-    import { ref, reactive } from 'vue'
     const list = [
         "https://storage.360buyimg.com/jdc-article/NutUItaro34.jpg",
         "https://storage.360buyimg.com/jdc-article/NutUItaro2.jpg",
@@ -23,17 +21,14 @@
     const background = ['color1', 'color2', 'color3']
     const indicatorDots = true
     const autoplay = true
-    const n = ref(0)
-    const add = () => {
-        n.value++
-    }
+    // const n = ref(0)
+    // const add = () => {
+    //     n.value++
+    // }
     
 </script>
 
 <style scoped>
-    .uni-margin-wrap {
-        width: 100%;
-    }
     .swiper {
         width: 100%;
         overflow: hidden;

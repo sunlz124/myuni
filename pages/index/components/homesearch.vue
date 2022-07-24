@@ -1,18 +1,22 @@
 <template>
     <view class="content">
-        <view class="left">
-            <i class="Hui-iconfont">&#xe665;</i>
-            <swiper class="swiper" circular vertical autoplay disableTouch>
-                <swiper-item class="swiper-item" v-for="(item,index) in list" :key="index">
-                    <text @click="clickSearchKey(item)">{{item}}</text>
-                </swiper-item>
-            </swiper>
+        <view class="status_bar"/>
+        <view class="search">
+            <view class="left">
+                    <i class="Hui-iconfont">&#xe665;</i>
+                    <swiper class="swiper" circular vertical autoplay disableTouch>
+                        <swiper-item class="swiper-item" v-for="(item,index) in list" :key="index">
+                            <text @click="clickSearchKey(item)">{{item}}</text>
+                        </swiper-item>
+                    </swiper>
+                </view>
+                <view class="right">
+                    <i class="Hui-iconfont">&#xe650;</i> 
+                    <i class="Hui-iconfont">&#xe682;</i>
+                </view>
+            </view>
         </view>
-        <view class="right">
-            <i class="Hui-iconfont">&#xe650;</i> 
-            <i class="Hui-iconfont">&#xe682;</i>
-        </view>
-    </view>
+       
 </template>
 
 <script setup>
@@ -31,10 +35,20 @@
 </script>
 
 <style scoped>
-    *{
-        box-sizing: border-box;
-    }
     .content{
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        background-color: #fff;
+    }
+    .status_bar {
+        height: var(--status-bar-height);
+        width: 100%;
+        display: block;
+    }
+    .search{
         /* height: 32px; */
         width: calc(100vw - 20px);
         border: 1px solid #000;
@@ -66,7 +80,7 @@
         padding: 0 10px;
     }
     .swiper-item{
-        wwhite-space: nowrap; 
+        white-space: nowrap; 
         width: 100%; 
         overflow: hidden;
         text-overflow:ellipsis;

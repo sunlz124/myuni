@@ -40,7 +40,7 @@
     "statusbar": {
       "immersed": "supportedDevice",
       "style": "light",
-      "background": "#F8F8F8"
+      "background": "#FFF"
     },
     "usingComponents": true,
     "nvueStyleCompiler": "uni-app",
@@ -122,7 +122,7 @@
         {
           "pagePath": "pages/list/list",
           "iconfont": {
-            "text": "UE679",
+            "text": "邮箱",
             "selectedText": "",
             "fontSize": "24px",
             "color": "#7A7E83",

@@ -3,6 +3,11 @@
 		{
 			"path": "pages/index/index",
 			"style": {
+                "app-plus": {
+                    "background":"#FFFFFF",
+                    // "bounce": "none"
+                    "titleNView":false
+                },
 				"navigationBarTitleText": "uni-app"
 			}
 		},
@@ -49,8 +54,8 @@
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app",
-		"navigationBarBackgroundColor": "#F8F8F8"
-		// "backgroundColor": "#F8F8F8"
+		"navigationBarBackgroundColor": "#FFF",
+		"backgroundColor": "#F6F6F6"
 	},
 	"uniIdRouter": {},
     "tabBar": {
