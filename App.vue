@@ -1,8 +1,7 @@
 <script>
-    import  './static/Hui-iconfont/1.0.9/iconfont.min.css'  
 	export default {
 		onLaunch: function() {
-			console.log('App Launch123')
+			console.log('App Launch')
 		},
 		onShow: function() {
 			console.log('App Show')
@@ -15,5 +14,4 @@
 
 <style>
 	/*每个页面公共css */
-    
 </style>

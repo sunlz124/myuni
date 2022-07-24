@@ -3,19 +3,17 @@ import App from './App'
 // #ifndef VUE3
 import Vue from 'vue'
 Vue.config.productionTip = false
-import {router,RouterMount} from './router/router.js'  //路径换成自己的
-Vue.use(router)
-
 App.mpType = 'app'
+
 const app = new Vue({
     ...App
 })
-RouterMount(app,router,'#app')
 app.$mount()
 // #endif
 
 // #ifdef VUE3
 import { createSSRApp } from 'vue'
+import  './static/Hui-iconfont/1.0.9/iconfont.min.css' 
 export function createApp() {
   const app = createSSRApp(App)
   return {

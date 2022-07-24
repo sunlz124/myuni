@@ -1,6 +1,7 @@
 <template>
 	<view>
-		<text class="title">user</text>
+        user
+		<!-- <text class="title">user</text> -->
 	</view>
 </template>
 

@@ -1,4 +1,4 @@
-import { openBlock, createElementBlock, createElementVNode } from "vue";
+import { openBlock, createElementBlock, createElementVNode, createCommentVNode } from "vue";
 var _export_sfc = (sfc, props) => {
   const target = sfc.__vccOpts || sfc;
   for (const [key, val] of props) {
@@ -21,9 +21,10 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
     style: { flexDirection: "column" }
   }, [
     createElementVNode("view", null, [
-      createElementVNode("u-text", { class: "title" }, "user")
+      createElementVNode("u-text", null, " user "),
+      createCommentVNode(' <text class="title">user</text> ')
     ])
   ]);
 }
-var user = /* @__PURE__ */ _export_sfc(_sfc_main, [["render", _sfc_render], ["__file", "/Users/sunlianzheng/Sites/my-app/myuni/pages/user/user.nvue"]]);
+var user = /* @__PURE__ */ _export_sfc(_sfc_main, [["render", _sfc_render], ["__file", "/Users/sunlianzheng/Sites/my-app/myapp/pages/user/user.nvue"]]);
 export { user as default };

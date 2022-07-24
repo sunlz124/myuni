@@ -3,19 +3,19 @@
         <homesearch></homesearch>
         <homeswiper></homeswiper>
 		<view class="text-area">
-			<text class="title">{{title}}</text>
 			<button @click="say">跳转到details</button>
 		</view>
+        123
 	</view>
     
 </template>
 
 <script setup>
-    const title='hello'
     const say = ()=>{
         uni.navigateTo({
-        	url: '/pages/details/details' + "?data='我是从 index 页面传过来的值'",
+        	url: '../details/details' + "?data='我是从 index 页面传过来的值'",
         })
+        console.log('1111')
     }
 </script>
 

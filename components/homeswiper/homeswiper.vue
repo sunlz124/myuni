@@ -13,7 +13,6 @@
 </template>
 
 <script setup>
-    const a = uni.screenWidth
     import { ref, reactive } from 'vue'
     const list = [
         "https://storage.360buyimg.com/jdc-article/NutUItaro34.jpg",
